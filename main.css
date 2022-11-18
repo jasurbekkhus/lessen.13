@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background: blue;
+    position: relative;
+    left: -100px;
+
+    /* nomi */
+    animation-name: lorem;
+    /* davomiyligi */
+    animation-duration: 2s;
+    /* kuyish vaqti */
+    animation-delay: 0.3s;
+    /* "to"dagi hossalani saqlab qolish */
+    animation-fill-mode: forwards;
+    /* necha marta kelishi*/
+    animation-iteration-count: 3;
+    /* qaytish */
+    animation-direction: alternate;
+    /* holati */
+    animation-timing-function: linear;
+}
+
+@keyframes lorem{
+    from{
+        left: -100;
+    }
+    to{
+        left: 500px;
+        background: red;
+        transform: rotate(360deg);
+        border-radius: 35px 35px 10px 10px;
+    }
+}
+.card{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    /* short hand */
+    background: violet;
+    border: 5px solid dodgerblue;
+    animation: card 3s linear 0s 2;
+}
+@keyframes card{
+    0%{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: 0;
+        left: 500px;
+    }
+    50%{
+        top: 500px;
+        left: 500px;
+    }
+    75%{
+        top: 500px;
+        left: 0;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
